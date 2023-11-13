@@ -28,3 +28,6 @@ Content-Type: application/json
     "hora": "13:05:30",
     "velocidad": "850"
 }
+
+###
+DELETE http://localhost:3000/api/gps/5 HTTP/1.1
