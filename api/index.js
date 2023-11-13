@@ -1,5 +1,7 @@
 import express from "express";
 
+import cors from "cors";
+
 import db from "./config/db.js";
 import indexRouter from "./routes/index.route.js";
 
@@ -9,6 +11,7 @@ app.set("port", process.env.PORT || 3000);
 
 //middlewares
 app.use(express.json());
+app.use(cors());
 
 //routes
 app.use("/", indexRouter);
