@@ -1,3 +1,4 @@
+### GPS
 GET http://localhost:3000/api/gps HTTP/1.1
 
 ###
@@ -31,3 +32,37 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/api/gps/5 HTTP/1.1
+
+
+
+
+### PANICO
+GET http://localhost:3000/api/panico HTTP/1.1
+
+###
+GET http://localhost:3000/api/panico/1 HTTP/1.1
+
+###
+POST http://localhost:3000/api/panico HTTP/1.1
+Content-Type: application/json
+
+{
+    "bus": "piloto2",
+    "fecha": "08/11/2023",
+    "hora": "13:05:30",
+    "boton": 1
+}
+
+###
+PUT http://localhost:3000/api/panico/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "bus": "piloto2",
+    "fecha": "08/11/2023",
+    "hora": "13:05:30",
+    "boton": 0
+}
+
+###
+DELETE http://localhost:3000/api/panico/3 HTTP/1.1
