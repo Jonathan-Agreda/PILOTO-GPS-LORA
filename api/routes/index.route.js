@@ -1,7 +1,9 @@
 import { Router } from "express";
 
 import gpsRouter from "./gps.route.js";
+import devicesGpsRouter from "./devicesGps.route.js";
 import panicoRouter from "./panico.route.js";
+import devicesPanicoRouter from "./devicesPanico.route.js";
 
 
 const indexRouter = Router();
@@ -14,7 +16,11 @@ indexRouter.get(prefix, (req, res) => {
 
 indexRouter.use(`${prefix}/gps`, gpsRouter);
 
+indexRouter.use(`${prefix}/devicesGps`, devicesGpsRouter);
+
 indexRouter.use(`${prefix}/panico`, panicoRouter);
+
+indexRouter.use(`${prefix}/devicesPanico`, devicesPanicoRouter);
 
 indexRouter.use("*", (req, res) => {
     res.send("404 - not found");
