@@ -10,11 +10,13 @@ export default connection.promise(); */
 
 import mysql from "mysql2";
 
-const connection = mysql.createConnection({
+//const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: '135.148.121.160',
     user: 'track_user',
     password: 'trackIoT2023!!',
-    database: 'trackiot'
+    database: 'trackiot',
+    connectionLimit: 10
 });
 
 export default connection.promise();
